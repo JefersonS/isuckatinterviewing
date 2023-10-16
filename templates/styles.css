@@ -1,0 +1,91 @@
+
+.header {
+    background-color: #d24848;
+    width: 100%;
+    display: grid;
+}
+
+.header-icon {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header-item-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.header-item-2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.header-item-3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.header-item-4 {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.main-content {
+    width: 100%;
+    display: block;
+}
+
+.questions-header {
+    margin: auto;
+    width: 70%;
+    display: grid;
+}
+
+.questions-header-init {
+    grid-column: 1;
+}
+
+.questions-header-spoiler {
+    grid-column: 6;
+}
+
+.questions-header-sorting {
+    grid-column: 7;
+}
+
+.questions {
+    border: #1c1616;
+    border-radius: 10px;
+    border-style: solid;
+    margin: auto;
+    width: 70%;
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.question {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+}
+
+.it-sucks-button {
+    width: 50%;
+}
+
+hr {
+    width: 80%;
+}
+
+span {
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.you-sucks-button {
+    width: 50%;
+}
