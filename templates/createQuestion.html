@@ -1,0 +1,22 @@
+<form class="create-question">
+    <div>
+      <div class="form-label">
+        <label for="question">Question</label>
+      </div>
+      <input type="text" class="form-control" id="question" placeholder="Tell us the question you were asked!">
+    </div>
+    <div>
+      <div class="form-label">
+        <label for="answer">Answer</label>
+      </div>
+      <input type="text" class="form-control" id="answer" placeholder="And the best possible answer">
+    </div>
+    <div class="form-button-area">
+      <div>
+        <button type="submit" class="submit-question">Create</button>
+      </div>
+      <div>
+        <button type="submit" class="cancel-question" hx-get="/questions/cancel" hx-target=".container-header">Cancel</button>
+      </div>
+    </div>
+</form>

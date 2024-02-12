@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+        <link rel="stylesheet" href="templates/styles.css">
+        <title>You SUCK at interviewing</title>
+    </head>
+
+    <body>
+        <header name="header" class="header">
+            <div class="header-icon">
+                You Suck<br/>Icon
+            </div>
+            <div class="header-search">
+                <input type="text" placeholder="Search or Create Questions">
+            </div>
+            <div class="header-login">
+                <button class="login-button">LOGIN</button>
+            </div>
+        </header>
+        <!--
+        <form action="http://localhost:8080/index/create-question" method="POST">
+            <label>New Question</label>
+            <input type="text" name="question"/>
+            <label>Answer</label>
+            <input type="text" name="answer"/>
+            <input type="submit"></input>
+        </form>
+        -->
+        <div name="main-content" class="main-content">
+            <div class="questions-header">
+                <div class="create-question-header">
+                    <button class="create-question-button">New Question</button>
+                </div>
+                <div class="questions-sorting-header">
+                    <select name="questions-sorting" class="questions-sorting"> 
+                        <option value="recentlyAdded">Recently Added</option>
+                        <option value="theySuck">The ones that suck more</option>
+                        <option value="youSuck">The ones you suck more</option>
+                    </select>
+                </div>
+                <div class="question-spoiler-header">
+                    <select name="questions-spoiler" class="questions-spoiler"> 
+                        <option value="showAnswers">Show Answers</option>
+                        <option value="hideAnswers">Hide Answers</option>
+                    </select>
+                </div>
+            </div>
+            {{.title}}
+            {{range .questions}}
+                <div class="questions">
+                    <span class="question">{{.Question}}</span>
+                    <span class="answer">{{.Answer}}</span>
+                    <div class="question-buttons">
+                        <div class="it-sucks-wrapper">
+                            <button class="it-sucks-button">It Sucks or no, You suck</button>
+                        </div>
+                    </div>
+                </div>
+            {{end}}
+        </div>
+        <div name="footer">
+            <footer>I don't know what I'm doing</footer>
+        </div>
+    </body>
+
+    
+</html>
