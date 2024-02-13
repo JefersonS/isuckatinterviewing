@@ -44,19 +44,19 @@ body.dark-mode {
   width: 50%;
 }
 
-input[type=text]{
+input[type=text] {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-   border-radius: 20px;
-   border: 1px solid #2d9fd9;
-   width: 100%;
-   height: 30px;
-   padding-left: 10px;
-  }
+  border-radius: 20px;
+  border: 1px solid #d5d5d5;
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+}
   
 input[type=text]:focus {
    outline: none;
-   border: 1px solid #a0d18c;
+   border: 1px solid #e67e22;
 }
 
 .dark-mode-toggle {
@@ -111,6 +111,9 @@ input[type=text]:focus {
 }
 
 .answer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 10px;
   color: #333;
   padding: 0px 0px 10px 15px;
@@ -159,6 +162,16 @@ input[type=text]:focus {
   justify-content: center;
 }
 
+.login-button {
+  background-color: #e67e22;
+  color: rgb(255, 255, 255);
+  border: 1px solid #ffffff;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
 .submit-question {
   background-color: #e67e22;
   color: rgb(255, 255, 255);
@@ -179,4 +192,51 @@ input[type=text]:focus {
   border-radius: 5px;
   transition: background-color 0.3s ease;
   width: 30%;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+button:hover {
+  background-color: #c96208;
+}
+
+.cancel-question:hover {
+  background-color: #e67e22;
+  color: #ffffff;
+}
+
+.upvote {
+  color: #e67e22;
+}
+
+.downvote {
+  color: #e67e22;
+}
+
+.voting-icons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.voting-icons i {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.voting-icons i:active {
+  transform: translateY(2px);
+}
+
+.voting-icons i:hover {
+  color: #c96208;
+}
+
+.votes {
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }

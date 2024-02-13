@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+  <script src="https://kit.fontawesome.com/0aebddf4ff.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="templates/home.css">
   <title>Q&A Homepage</title>
 </head>
@@ -29,9 +30,16 @@
     <hr>
     <div class="question">
       <span>{{.Question}}</span></br>
+      <div class="voting-icons">
+        <i class="upvote fa-solid fa-caret-up"></i>
+        <i class="downvote fa-solid fa-caret-down"></i>
+      </div>
     </div>
     <div class="answer">
       <span>{{.Answer}}</span>
+      <div class="votes">
+        <span>0</span>
+      </div>
     </div>
   {{end}}
 
