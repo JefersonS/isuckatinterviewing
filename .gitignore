@@ -8,6 +8,10 @@
 *.so
 *.dylib
 
+# local configs
+.vscode
+.prettierrc
+
 # Test binary, built with `go test -c`
 *.test
 

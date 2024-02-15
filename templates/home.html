@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
-  <script src="https://kit.fontawesome.com/0aebddf4ff.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="templates/home.css">
-  <title>Q&A Homepage</title>
-</head>
-<body class="light-mode">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://kit.fontawesome.com/0aebddf4ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="templates/home.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="templates/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="templates/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="templates/favicon-16x16.png" />
+    <link rel="manifest" href="templates/site.webmanifest" />
+    <title>You SUCK at interviewing</title>
+  </head>
 
-<header name="header" class="header">
-  <div class="header-icon">
-      You Suck<br/>Icon
-  </div>
-  <div class="header-search">
-      <input type="text" placeholder="Search or Create Questions">
-  </div>
-  <div class="header-login">
-      <button class="login-button">LOGIN</button>
-  </div>
-</header>
-<div class="container-header">
-  <span>If you have either just sucked or rocked during an interview, it doesn't matter, share your experience by creating a question!</span>
-  <button class="ask-button" hx-get="/questions/create" hx-target=".container-header">Create a Question!</button>
-</div>
-<div class="container">
-  {{range .questions}}
-    <hr>
-    <div class="question">
-      <span>{{.Question}}</span></br>
-      <div class="voting-icons">
-        <i class="upvote fa-solid fa-caret-up"></i>
-        <i class="downvote fa-solid fa-caret-down"></i>
+  <body class="light-mode">
+    <header class="header">
+      <div class="header-icon">You Suck<br />Icon</div>
+      <div class="header-search">
+        <input type="text" placeholder="Search or Create Questions" />
       </div>
-    </div>
-    <div class="answer">
-      <span>{{.Answer}}</span>
-      <div class="votes">
-        <span>0</span>
+      <div class="header-login">
+        <button class="login-button">LOGIN</button>
       </div>
+    </header>
+    <div class="container-header">
+      <span>If you have either just sucked or rocked during an interview, it doesn't matter, share your experience by creating a question!</span>
+      <button class="ask-button" hx-get="/questions/create" hx-target=".container-header">Create a Question!</button>
     </div>
-  {{end}}
-
-</body>
+    <div class="container">
+      {{range .questions}}
+      <hr />
+      <div class="question">
+        <span>{{.Question}}</span><br />
+        <div class="voting-icons">
+          <i class="upvote fa-solid fa-caret-up"></i>
+          <i class="downvote fa-solid fa-caret-down"></i>
+        </div>
+      </div>
+      <div class="answer">
+        <span>{{.Answer}}</span>
+        <div class="votes">
+          <span>0</span>
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </body>
 </html>

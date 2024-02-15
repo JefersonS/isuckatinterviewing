@@ -30,7 +30,9 @@ func main() {
 	router := gin.Default()
 	router.Static("/templates", "./templates")
 	router.LoadHTMLGlob("templates/*")
-	router.GET("/sayIt", func(c *gin.Context) {
+
+	// home page
+	router.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "home.html", gin.H{
 			"questions": questions,
 		})
@@ -41,7 +43,7 @@ func main() {
 	})
 
 	router.GET("/questions/cancel", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "container-header.html", gin.H{})
+		c.HTML(http.StatusOK, "containerHeader.html", gin.H{})
 	})
 
 	router.Run()
