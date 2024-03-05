@@ -100,7 +100,7 @@ textarea:focus {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .container {
@@ -260,4 +260,14 @@ button:hover {
 
 .container > hr:first-of-type {
   display: none;
+}
+
+.question-created-successfully {
+  color: #27ae60;
+  padding: 10px 0px 10px 0px;
+}
+
+.question-not-created {
+  color: #c0392b;
+  padding: 10px 0px 10px 0px;
 }

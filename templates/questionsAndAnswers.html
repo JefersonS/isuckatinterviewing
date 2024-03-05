@@ -1,0 +1,16 @@
+{{range .questions}}
+<hr />
+<div class="question">
+  <span>{{.Question}}</span><br />
+  <div class="voting-icons">
+    <i class="upvote fa-solid fa-caret-up"></i>
+    <i class="downvote fa-solid fa-caret-down"></i>
+  </div>
+</div>
+<div class="answer">
+  <span>{{.Answer}}</span>
+  <div class="votes">
+    <span>0</span>
+  </div>
+</div>
+{{end}}

@@ -23,3 +23,9 @@
 
 # Go workspace file
 go.work
+
+# Hot reload files
+/tmp
+
+# Local DB stuff
+*.db
