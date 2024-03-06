@@ -8,7 +8,7 @@ import (
 
 	"gorm.io/gorm"
 
-	"gorm.io/driver/sqlite"
+	"gorm.io/driver/postgres"
 )
 
 type Question struct {
@@ -19,7 +19,8 @@ type Question struct {
 }
 
 func main() {
-	db, err := gorm.Open(sqlite.Open("test.db"), &gorm.Config{})
+	dsn := "host=localhost user=postgres password=5234 dbname=postgres port=5432 sslmode=disable"
+	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
   if err != nil {
     panic("failed to connect database")
   }
