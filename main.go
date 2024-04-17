@@ -28,8 +28,8 @@ func main() {
 	db.AutoMigrate(&Question{})
 
 	router := gin.Default()
-	router.Static("/templates", "./templates")
-	router.LoadHTMLGlob("templates/*")
+	router.Static("/static", "./web/static")
+	router.LoadHTMLGlob("web/templates/*")
 		// home page
 	router.GET("/", func(c *gin.Context) {
 		var questions []Question
